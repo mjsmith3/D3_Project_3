@@ -68,6 +68,15 @@ d3.json("data/buildings.json").then(function (data) {
         .text("Worlds Tallest Buildings")
         .attr("font-size", "20px")
 
+
+    svg.append("text")
+        .attr("x", -height / 2)
+        .attr("y", margin.left / 2)
+        .text("Height (Meters)")
+        .attr("font-size", "16px")
+        .attr("transform", "rotate(-90)")
+        .attr("text-anchor", "end")
+
     //Add all of the bars to your graph
     var rects = g.selectAll("rect")
         .data(data)
